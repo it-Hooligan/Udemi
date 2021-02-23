@@ -16,7 +16,7 @@ const personalMovieDB = {
     movies: {},
     actors: {},
     genres: [],
-    privat: false
+    privat: false,
 };
 
 function rememberMyFilms() {
@@ -76,3 +76,64 @@ function writeYourGenres() {
 }
 writeYourGenres();
 showMyDB();
+
+
+
+
+//?колбек 
+
+function first() {
+    setTimeout(function () {
+        console.log('1');
+    }, 2000);
+    // console.log(second());
+}
+
+
+function second() {
+    console.log('2');
+}
+
+first();
+second();
+
+
+function learnJs(lang, callback) {
+    console.log(`Я учу: ${lang}`);
+    callback();
+}
+
+function done() {
+    console.log('Я прошел этот урок');
+
+}
+
+learnJs(`JavaScript`, done);
+// function(){
+//     console.log('Я прошел этот урок');
+
+// });
+
+
+//? перебор массивов 
+
+const obj = {
+    name: 45,
+    user: 98,
+    inf: `options ledi N`,
+    sun: {
+        ne: 45,
+        b: 9
+    },
+
+};
+
+for (let key in obj) {
+
+    if (typeof (obj[key]) === 'object') {
+        for (let i in obj.key) {
+            console.log(obj.key[i]);
+        }
+    }
+    console.log(obj[key]);
+}
